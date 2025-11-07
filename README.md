@@ -1,5 +1,9 @@
 # A generalizable 3D framework and model for self-supervised learning in medical imaging
 
+***npj Digital Medicine (2025)***
+
+<img src="assets/3dino_logo.png" alt="3DINO logo" width="200px"/>
+
 Tony Xu, 
 Sepehr Hosseini, 
 Chris Anderson, 
@@ -8,13 +12,13 @@ Rahul G. Krishnan,
 Anne Martel,
 Maged Goubran
 
-Paper link [here](https://arxiv.org/abs/2501.11755)
+[Paper](https://doi.org/10.1038/s41746-025-02035-w) | [Preprint](https://arxiv.org/abs/2501.11755) | [HF Weights](https://huggingface.co/AICONSlab/3DINO-ViT)
 
 This codebase contains PyTorch code and our 3DINO-ViT pretrained model for the 3DINO self-supervised framework for training networks on unlabled 3D medical images, developed at Sunnybrook Research Institute.   
 
 **Abstract:** Current self-supervised learning methods for 3D medical imaging rely on simple pretext formulations and organ- or modality-specific datasets, limiting their generalizability and scalability. We present 3DINO, a cutting-edge SSL method adapted to 3D datasets, and use it to pretrain 3DINO-ViT: a general-purpose medical imaging model, on an exceptionally large, multimodal, and multi-organ dataset of ~100,000 3D medical imaging scans from over 10 organs. We validate 3DINO-ViT using extensive experiments on numerous medical imaging segmentation and classification tasks. Our results demonstrate that 3DINO-ViT generalizes across modalities and organs, including out-of-distribution tasks and datasets, outperforming state-of-the-art methods on the majority of evaluation metrics and labeled dataset sizes. Our 3DINO framework and 3DINO-ViT will be made available to enable research on 3D foundation models or further finetuning for a wide range of medical imaging applications.  
 
-![Gif of 3DINO PCA visualization on brain MRI](pca_example.gif)
+![Gif of 3DINO PCA visualization on brain MRI](assets/pca_example.gif)
 
 ## Installation
 
@@ -26,7 +30,7 @@ pip install -r requirements.txt
 
 ## 3DINO-ViT Model
 
-3DINO-ViT model will be released on acceptance of the paper!
+The 3DINO-ViT pretrained weights are now available for download on [HuggingFace](https://huggingface.co/AICONSlab/3DINO-ViT)! 
 
 A barebones example for loading the pretrained network and applying it to an image to extract a feature vector representation is provided in [this notebook](notebooks/basic_model_use.ipynb).
 
@@ -254,12 +258,11 @@ This repo builds upon the excellent work from the original [DINOv2](https://gith
 If you find this repository useful or use 3DINO-ViT in your research, please consider giving a star and citing the following paper:
 
 ```
-@misc{xu2025generalizable3dframeworkmodel,
-      title={A generalizable 3D framework and model for self-supervised learning in medical imaging}, 
-      author={Tony Xu and Sepehr Hosseini and Chris Anderson and Anthony Rinaldi and Rahul G. Krishnan and Anne L. Martel and Maged Goubran},
-      year={2025},
-      eprint={2501.11755},
-      archivePrefix={arXiv},
-      primaryClass={eess.IV},
-      url={https://arxiv.org/abs/2501.11755}, 
+@article{xu3dino2025,
+  title={A generalizable 3D framework and model for self-supervised learning in medical imaging},
+  author={Xu, Tony and Hosseini, Sepehr and Anderson, Chris and Rinaldi, Anthony and Krishnan, Rahul G. and Martel, Anne L. and Goubran, Maged},
+  journal={npj Digital Medicine},
+  year={2025},
+  doi={10.1038/s41746-025-02035-w},
 }
+```
